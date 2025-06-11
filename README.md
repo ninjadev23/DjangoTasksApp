@@ -10,7 +10,7 @@ virtualenv env
 ```
 Linux:
 ```
-source ./venv/bin/activate
+source ./env/bin/activate
 ```
 Windows:
 ```
