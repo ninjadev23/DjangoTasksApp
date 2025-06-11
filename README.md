@@ -1,7 +1,8 @@
 ### Django Tasks App
 Implementa formularios de django, modelos, conexion con base de datos, decoradores, cookies y templates. Ademas de usar entornos virtual con virtualenv o venv en el desarrollo
-![alt text](image.png)
+
 ![alt text](image-1.png)
+![alt text](image.png)
 #### Run Command
 ```
 pip install virtualenv
