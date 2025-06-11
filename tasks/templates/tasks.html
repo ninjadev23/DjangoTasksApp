@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="text-center">Tareas</h1>
+<div class="text-center">
+	<a href="/tasks/create/" class="btn btn-dark mt-5">Agregar Nuevas +</a>
+</div>
+<main class="container">
+	<div class="row">
+		<div class="col-md-6 offset-md-3">
+	<ul class="list-group">
+		
+			{% for task in tasks %}
+		
+			{% if task.important %}
+				<li class="list-group-item mt-5 shadow p-3 ">
+	
+			{% else %}
+				<li class="list-group-item mt-5 shadow-sm">
+	
+			{% endif %}
+		<a href="{% url 'task_detail' task.id %}">
+				
+			<h2>{{task.title}}</h2>
+			<p>{{task.description}}</p>
+			{% if task.datecompleted %}
+			<p>Tarea Completada en: {{task.datecompleted}}</p>
+			{% endif %}
+			<style>
+				a{
+					list-style: none;
+					text-decoration: none;
+					color:black;
+				}
+			</style>
+		</a>
+	</li>
+
+{% endfor %}
+
+	</ul>
+		</div>
+	</div>
+</main>
+{% endblock %}
